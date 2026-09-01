@@ -40,6 +40,7 @@
 | **xmusic 无键钢琴** | 14 类手势识别 + RVV 向量加速，原创 RISC-V 加速库 | Python · C · ESP32 · BLE |
 | **GogogoAI 出行助手** | LLM 意图识别驱动的智能出行小程序 | LLM API · 微信小程序 |
 | **五禽戏动作识别** | 基于关键点的动作识别系统，准确率 90.6% | MediaPipe · PyTorch · ONNX |
+| **[黄诗扶 Wiki](https://github.com/huangshifu-wiki/huangshifu-wiki)** | 团队全栈社区平台（Wiki / 帖子 / 图库 / 音乐资料 / 语义搜索），已上线 [huangshifu.wiki](https://huangshifu.wiki/)，早期核心开发 | React · Express · PostgreSQL · Qdrant |
 
 </div>
 
