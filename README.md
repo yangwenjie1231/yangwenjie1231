@@ -95,6 +95,8 @@
 
 [![GitHub Streak](https://streak-stats.demolab.com/?user=yangwenjie1231&theme=vue-dark&hide_border=true)](https://github.com/yangwenjie1231)
 
+![Metrics](/github-metrics.svg)
+
 </div>
 
 [![Yang Wenjie's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=yangwenjie1231&theme=vue-dark&hide_border=true&custom_title=Past%2031%20days'%20Activity)](https://github.com/yangwenjie1231)
