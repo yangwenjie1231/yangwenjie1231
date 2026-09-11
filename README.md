@@ -28,7 +28,7 @@
 |------|------|
 | [Sipeed PicoClaw](https://github.com/sipeed/picoclaw) | 28K+ ⭐ Go 语言 AI 助手 · 开发者，多 PR 已合并 |
 | [Sipeed MaixPyV4](https://github.com/sipeed/MaixPy) | 官方仓库贡献者，手势识别模块（LinearSVM 分类器） |
-| RVV 向量加速库 | 面向 RISC-V 的 NumPy 兼容加速库，实测 4×+ 性能提升 |
+| [RVV 向量加速库](https://github.com/yangwenjie1231/sg2002_rvv) | 面向 RISC-V 的 NumPy 兼容加速库，实测 4×+ 性能提升 |
 
 ## 亮点项目 🚀
 
