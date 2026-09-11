@@ -3,7 +3,7 @@
 <!-- Typing SVG -->
 <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=22&pause=1000&color=2ECC71&center=true&vCenter=true&lines=AI+Full-Stack+Engineer;Computer+Vision+%26+Edge+AI;RISC-V+%26+Multi-Agent+Systems;Open-Source+Contributor" alt="Typing SVG" />
 
-<h1>Yang Wenjie 羊文杰</h1>
+<h1>Wenjie Yang</h1>
 <p>
   <a href="https://github.com/yangwenjie1231"><img src="https://img.shields.io/badge/GitHub-yangwenjie1231-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" /></a>
   <a href="mailto:yangwenjie1231@qq.com"><img src="https://img.shields.io/badge/Email-yangwenjie1231%40qq.com-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
