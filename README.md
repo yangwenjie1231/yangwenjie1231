@@ -10,7 +10,7 @@
   <img src="https://visitor-badge.glitch.me/badge?page_id=yangwenjie1231&left_color=2ECC71&right_color=181717" alt="visitors" />
 </p>
 
-**2009 年生 · 高二｜AI 全栈工程 · 嵌入式视觉 · RISC-V 创作者**
+**高二｜AI 全栈工程 · 嵌入式视觉 · RISC-V  · 端侧/边缘计算**
 
 </div>
 
