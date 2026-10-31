@@ -30,3 +30,25 @@ jobs:
           template: classic
           base: header, activity, community, repositories, metadata
           config_timezone: Asia/Shanghai
+
+          # 语言分布（indepth 不开启，避免遍历全部仓库导致超时）
+          plugin_languages: yes
+          plugin_languages_limit: 8
+          plugin_languages_threshold: 1%
+          plugin_languages_sections: most-used
+          plugin_languages_details: percentage
+          plugin_languages_other: yes
+          # 不把 profile 仓库本身算进语言统计（它只有 Markdown/配置）
+          plugin_languages_ignored: markdown, jupyter notebook
+
+          # 编码习惯：提交时段分布 + 统计事实
+          plugin_habits: yes
+          plugin_habits_from: 200
+          plugin_habits_days: 30
+          plugin_habits_facts: yes
+          plugin_habits_charts: yes
+          plugin_habits_trim: yes
+
+          # 全年提交日历热图
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
