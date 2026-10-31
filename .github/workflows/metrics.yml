@@ -31,24 +31,29 @@ jobs:
           base: header, activity, community, repositories, metadata
           config_timezone: Asia/Shanghai
 
-          # 语言分布（indepth 不开启，避免遍历全部仓库导致超时）
+          # ---------------------------------------------------------------
+          # 语言分布
+          # ---------------------------------------------------------------
           plugin_languages: yes
           plugin_languages_limit: 8
           plugin_languages_threshold: 1%
           plugin_languages_sections: most-used
           plugin_languages_details: percentage
           plugin_languages_other: yes
-          # 不把 profile 仓库本身算进语言统计（它只有 Markdown/配置）
+          # 排除噪音仓库，否则统计严重失真。三类：
+          #   1. fork 的上游仓库 —— 代码不是自己写的
+          #   2. sg2002_rvv 内嵌了整份 RISC-V gcc sysroot + SDK（C 会被撑到 94MB）
+          #   3. 早年把整包资源塞进 git 的 HTML 小游戏（game / ywjgame）
+          #   4. 纯数据仓库（Technical_Data / picx-images-hosting）与本 profile 仓库
+          plugin_languages_skipped: MaaEnd, MaixPy, sipeed_wiki, picoclaw_old, AgentHub, claude-code-sourcemap, 6706-2026-test, picx-hsf, picx-images-hosting, onedrive-vercel-index, voc-yolo, ChatMap, license, je_score_operator, sophgo-sg200x-debian, sg2002_rvv, game, ywjgame, Technical_Data, yangwenjie1231
           plugin_languages_ignored: markdown, jupyter notebook
 
-          # 编码习惯：提交时段分布 + 统计事实
-          plugin_habits: yes
-          plugin_habits_from: 200
-          plugin_habits_days: 30
-          plugin_habits_facts: yes
-          plugin_habits_charts: yes
-          plugin_habits_trim: yes
-
+          # ---------------------------------------------------------------
           # 全年提交日历热图
+          # ---------------------------------------------------------------
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
+
+          # 注：plugin_habits 暂未启用 —— 当前上游版本在遇到 author 为空的
+          # commit 时会抛 TypeError: Cannot destructure property 'author' of
+          # 'undefined'，整块渲染成 "Unexpected error"。等上游修复后再加。
