@@ -46,11 +46,18 @@ jobs:
           #   3. 早年把整包资源塞进 git 的 HTML 小游戏（game / ywjgame）
           #   4. 纯数据仓库（Technical_Data / picx-images-hosting）与本 profile 仓库
           #
-          # 另外必须列全私有仓库：METRICS_TOKEN 带 repo scope 时，语言统计会把
-          # 私有仓库的代码量也算进去，虽然没有仓库名，但像 "TeX 8.86%" 这种
-          # 冷门语言占比会暴露私有项目的内容构成（实测来自 multiagent-collab-eval
-          # 与 hermes-agent-workspace-backup 的论文/排版文件）。
-          plugin_languages_skipped: MaaEnd, MaixPy, sipeed_wiki, picoclaw_old, AgentHub, claude-code-sourcemap, 6706-2026-test, picx-hsf, picx-images-hosting, onedrive-vercel-index, voc-yolo, ChatMap, license, je_score_operator, sophgo-sg200x-debian, sg2002_rvv, game, ywjgame, Technical_Data, yangwenjie1231, acrylic-charm-dxf, multiagent-collab-eval, hermes-agent-workspace-backup, xmusic, Cell-Vision-Pro, agent-workspace, magenta-realtime, groupD2025, 2, ai-trip, kechuang2024
+          # 私有仓库的名单放在 environment secret `METRICS_SKIP_PRIVATE` 里，
+          # 不写在这个文件 —— 本文件是公开的。原因：METRICS_TOKEN 带 repo scope，
+          # 语言插件会把私有仓库的代码量一并计入；仓库名虽不显示，但冷门语言占比
+          # 会暴露私有项目的内容构成（曾出现 TeX 8.86%，即私有仓库里的排版文件）。
+          # 换仓库/新增私有仓库时，同步更新该 secret：
+          #   gh secret set METRICS_SKIP_PRIVATE --env production --body "..."
+          plugin_languages_skipped: >-
+            MaaEnd, MaixPy, sipeed_wiki, picoclaw_old, AgentHub,
+            claude-code-sourcemap, 6706-2026-test, picx-hsf, picx-images-hosting,
+            onedrive-vercel-index, voc-yolo, ChatMap, license, je_score_operator,
+            sophgo-sg200x-debian, sg2002_rvv, game, ywjgame, Technical_Data,
+            yangwenjie1231, ${{ secrets.METRICS_SKIP_PRIVATE }}
           plugin_languages_ignored: markdown, jupyter notebook
 
           # ---------------------------------------------------------------
